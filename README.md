@@ -1,8 +1,8 @@
-# Squealer
+# squealer-demo
 
 A browser implementation of the Squealer from Gelman, Jaffe, Carlson and Greengard, "The Squealer: sensification of model exploration and model misfit" (arXiv:2606.29842, 2026).
 
-Live: https://magland.github.io/squealer/ (deployed from `main` by GitHub Actions).
+Live: https://magland.github.io/squealer-demo/ (deployed from `main` by GitHub Actions).
 
 Starting from the best-fit curve g(x | θ̂), the user grabs the curve at any point and drags it. The parameters follow as the most probable values for which the curve passes through the held point: θ* maximizes log p(θ | y) subject to g(x_j | θ*) = y_j. This is the limit σ* → 0 of the paper's pseudo-data method, without the lag of a soft pull and without a σ* to choose. On release the point stays as a pin, so the curve stays put and later grabs build on it; pins can be dragged or released (right-click). At most as many pins as parameters hold at once; a further grab releases the oldest.
 
